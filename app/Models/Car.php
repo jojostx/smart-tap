@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\Traits\Geographical;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Car extends Model
 {
-    use HasFactory;
+    use HasFactory, Geographical;
 
     /**
      * The attributes that are mass assignable.
