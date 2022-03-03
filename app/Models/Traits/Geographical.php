@@ -6,10 +6,6 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait Geographical
 {
-  protected static $latitude = 'latitude';
-  protected static $longitude = 'longitude';
-  protected static $kilometers = true;
-
   /**
    * @param Builder $query
    * @param float $latitude Latitude
