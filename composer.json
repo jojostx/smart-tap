@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
@@ -10,6 +13,7 @@
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
+        "livewire/livewire": "^2.10",
         "propaganistas/laravel-phone": "^4.3",
         "protonemedia/laravel-verify-new-email": "^1.5",
         "simplesoftwareio/simple-qrcode": "~4",
@@ -34,7 +38,10 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
-        }
+        },
+        "files": [
+            "helpers/auth.php"
+        ]
     },
     "scripts": {
         "post-autoload-dump": [
