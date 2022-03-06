@@ -17,7 +17,7 @@ class Customer
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::guard()->check() && (!$request->user()->admin())) {
+        if (Auth::guard('web')->check()) {
             return $next($request);
         }
 

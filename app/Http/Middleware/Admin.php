@@ -10,7 +10,7 @@ class Admin
 {
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && $request->user()->admin()) {
+        if (Auth::guard('admin')->check()) {
             return $next($request);
         }
 
