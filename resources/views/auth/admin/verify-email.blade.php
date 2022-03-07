@@ -1,4 +1,7 @@
 <x-admin-layout>
+    <x-slot:title>
+        Verify Your Email
+    </x-slot>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">

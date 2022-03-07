@@ -1,4 +1,7 @@
 <x-admin-layout>
+    <x-slot:title>
+        Login
+    </x-slot>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">

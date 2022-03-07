@@ -1,4 +1,7 @@
 <x-admin-layout>
+    <x-slot:title>
+        Reset Password
+    </x-slot>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
