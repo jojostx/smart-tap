@@ -13,20 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('qrcodes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('client_id')->constrained();
 
-            $table->string('name');
-
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('name')->index();
 
             $table->double('longitude');
             $table->double('latitude');
-            
+
+            $table->longText('image');
+ 
             $table->timestamps();
         });
     }
@@ -38,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('qrcodes');
     }
 };

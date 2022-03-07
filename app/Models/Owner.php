@@ -9,7 +9,6 @@ class Owner extends Model
 {
     use HasFactory;
 
-    
     /**
      * The attributes that are mass assignable.
      *
@@ -19,6 +18,7 @@ class Owner extends Model
         'name',
         'email',
         'phone_number',
+        'phone_verified_at'
     ];
 
     /**
@@ -30,4 +30,13 @@ class Owner extends Model
         'email_verified_at' => 'datetime',
         'phone_verified_at' => 'datetime',
     ];
+
+    /**
+     * The cars that belong to this owner.
+     *
+     */
+    public function cars()
+    {
+        return $this->belongsToMany(Car::class);
+    }
 }

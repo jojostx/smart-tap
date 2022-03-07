@@ -3,13 +3,12 @@
 namespace App\Models;
 
 use App\Models\Traits\Geographical;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class Client extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, Geographical;
 
@@ -22,8 +21,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'longitude',
-        'latitude',
     ];
 
     /**
@@ -44,4 +41,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * The qrcodes that belongs to this user/organization.
+     */
+    public function qrcodes()
+    {
+        return $this->hasMany(Qrcode::class);
+    }
 }

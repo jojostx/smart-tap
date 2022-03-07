@@ -32,4 +32,22 @@ class Car extends Model
         'email_verified_at' => 'datetime',
         'phone_verified_at' => 'datetime',
     ];
+
+    /**
+     * The owners of this car.
+     *
+     */
+    public function owners()
+    {
+        return $this->belongsToMany(Owner::class);
+    }
+
+    /**
+     * The current client this car is parked at.
+     *
+     */
+    public function client()
+    {
+        return $this->belongsToMany(Client::class);
+    }
 }
