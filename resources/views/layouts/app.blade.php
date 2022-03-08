@@ -15,7 +15,7 @@
     </head>
     <body class="antialiased font-dm">
         <div class="min-h-screen bg-gray-100">
-            @include('partials.user.navigation')
+            @include('partials.client.navigation')
 
             <!-- Page Heading -->
             <header class="bg-white shadow">
