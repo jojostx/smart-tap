@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Feature\Auth;
+namespace Tests\Feature\Auth\Admin;
 
-use App\Models\Client;
+use App\Models\Admin;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Notification;
@@ -14,7 +14,7 @@ class PasswordResetTest extends TestCase
 
     public function test_reset_password_link_screen_can_be_rendered()
     {
-        $response = $this->get('/forgot-password');
+        $response = $this->get(\route('admin.password.request'));
 
         $response->assertStatus(200);
     }
@@ -23,9 +23,9 @@ class PasswordResetTest extends TestCase
     {
         Notification::fake();
 
-        $client = Client::factory()->create();
+        $client = Admin::factory()->create();
 
-        $this->post('/forgot-password', ['email' => $client->email]);
+        $this->post(route('admin.password.email'), ['email' => $client->email]);
 
         Notification::assertSentTo($client, ResetPassword::class);
     }
@@ -34,12 +34,12 @@ class PasswordResetTest extends TestCase
     {
         Notification::fake();
 
-        $client = Client::factory()->create();
+        $client = Admin::factory()->create();
 
-        $this->post('/forgot-password', ['email' => $client->email]);
+        $this->post(route('admin.password.email'), ['email' => $client->email]);
 
         Notification::assertSentTo($client, ResetPassword::class, function ($notification) {
-            $response = $this->get('/reset-password/'.$notification->token);
+            $response = $this->get(route('admin.password.reset', ['token' => $notification->token]));
 
             $response->assertStatus(200);
 
@@ -51,12 +51,12 @@ class PasswordResetTest extends TestCase
     {
         Notification::fake();
 
-        $client = Client::factory()->create();
+        $client = Admin::factory()->create();
 
-        $this->post('/forgot-password', ['email' => $client->email]);
+        $this->post(route('admin.password.email'), ['email' => $client->email]);
 
         Notification::assertSentTo($client, ResetPassword::class, function ($notification) use ($client) {
-            $response = $this->post('/reset-password', [
+            $response = $this->post(route('admin.password.update'), [
                 'token' => $notification->token,
                 'email' => $client->email,
                 'password' => 'password',
