@@ -66,6 +66,6 @@ class Kernel extends HttpKernel
         
         'seenCookiePolicyAlert' => \App\Http\Middleware\CheckSeenCookiePolicyAlertCookie::class,
         'admin' => \App\Http\Middleware\Admin::class,
-        'customer' => \App\Http\Middleware\Customer::class
+        'client' => \App\Http\Middleware\Client::class
     ];
 }
