@@ -13,7 +13,7 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="antialiased font-dm">
+    <body class="antialiased">
         <div class="min-h-screen bg-gray-100">
             @include('partials.client.navigation')
 

@@ -1,10 +1,10 @@
 require('./bootstrap');
 
 import Alpine from 'alpinejs';
-import LocationManager from "./locationManager";
+// import LocationManager from "./locationManager";
 
 window.Alpine = Alpine;
 
-Alpine.data('location_manager', LocationManager);
+// Alpine.data('location_manager', LocationManager);
 
 Alpine.start();
