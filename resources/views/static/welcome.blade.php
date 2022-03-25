@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-
         
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,14 +22,6 @@
 
     </head>
     <body class="antialiased font-dm">
-        <x-toast :type="'success'" :hasCloseButton="true">
-            Lorem ipsum dolorxcccccccccccccccccccccccccc
-        </x-toast>
-
-        <x-alert :type="'danger'" :hasCloseButton="true">
-            Lorem ipsum dolorxcccccc dhcbdsdjbcfvdjvb
-        </x-alert>
-
         <div class="relative flex justify-center min-h-screen py-4 bg-gray-100 items-top dark:bg-gray-900 sm:items-center sm:pt-0">
             @if (Route::has('login'))
                 <div class="fixed top-0 right-0 hidden px-6 py-4 sm:block">
@@ -46,7 +37,6 @@
                 </div>
             @endif
 
-            
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-auto h-16 text-gray-700 sm:h-20">
@@ -57,7 +47,7 @@
                 </div>
                 
                 <div class="mt-8 overflow-hidden bg-white shadow dark:bg-gray-800 sm:rounded-lg">
-                    <x-location-input/>
+                   
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
                             <div class="flex items-center">

@@ -38,6 +38,7 @@ trait Geographical
   public function scopeGeofence($query, $latitude, $longitude, $inner_radius, $outer_radius)
   {
     $query = $this->scopeDistance($query, $latitude, $longitude);
+
     return $query->havingRaw('distance BETWEEN ? AND ?', [$inner_radius, $outer_radius]);
   }
 
