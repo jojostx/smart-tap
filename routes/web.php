@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\QrcodeController;
 use Illuminate\Support\Facades\Route;
 
 /*

@@ -22,6 +22,8 @@ class CreateController extends Controller
 
         $qrCode = QrCode::generate($validated['name']);
 
+        dd($qrCode);
+
         return [
             'qrcode_name' => $validated['name'],
             'company_name' => Auth::user()->name,

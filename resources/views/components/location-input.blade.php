@@ -1,11 +1,11 @@
 <div x-data="location_manager" class="mt-4">
-  <input type="hidden" name="latitude" x-ref="latitude" required>
-  <input type="hidden" name="longitude" x-ref="longitude" required>
+  <input type="hidden" value="6.4333" name="latitude" x-ref="latitude" required>
+  <input type="hidden" value="4.7434" name="longitude" x-ref="longitude" required>
 
   <x-button type="button" x-on:click="locate" x-bind:disabled="isLocating">
-    <span class="relative flex h-3 w-3 mr-2">
-      <span x-bind:class="{ 'animate-ping': isLocating }" class="absolute bg-white inline-flex h-full w-full rounded-full opacity-75"></span>
-      <span class="relative bg-white inline-flex rounded-full h-3 w-3"></span>
+    <span class="relative flex w-3 h-3 mr-2">
+      <span x-bind:class="{ 'animate-ping': isLocating }" class="absolute inline-flex w-full h-full bg-white rounded-full opacity-75"></span>
+      <span class="relative inline-flex w-3 h-3 bg-white rounded-full"></span>
     </span>
     Get My Location
   </x-button>

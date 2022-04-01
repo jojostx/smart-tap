@@ -96,7 +96,7 @@
           },
 
           '@open-toast.window'($event) {
-            if (!$event.detail.message || !event.detail.toast_type) {
+            if (!$event.detail.message || !$event.detail.toast_type) {
               return;
             }
 

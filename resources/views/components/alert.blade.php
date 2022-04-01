@@ -90,7 +90,7 @@
             },
 
             ['@open-alert.window']($event) {
-              if (!$event.detail.message || !event.detail.alert_type) {
+              if (!$event.detail.message || !$event.detail.alert_type) {
                 return;
               }
 
