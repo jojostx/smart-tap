@@ -4,9 +4,6 @@
     </x-slot>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 text-gray-500 fill-current" />
-            </a>
         </x-slot>
 
         <!-- Session Status -->
@@ -19,7 +16,7 @@
           <h1 class="text-lg font-medium">Create QR Code</h1>
         </div>
 
-        <form method="POST" action="{{ route('qr-code') }}" class="mt-4">
+        <form method="POST" action="{{ route('qr-code.create') }}" class="mt-4">
             @csrf
 
             <!-- Name -->
