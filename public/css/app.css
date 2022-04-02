@@ -1018,9 +1018,6 @@ select {
 .mt-1 {
   margin-top: 0.25rem;
 }
-.mr-1 {
-  margin-right: 0.25rem;
-}
 .-mr-2 {
   margin-right: -0.5rem;
 }
@@ -1057,8 +1054,11 @@ select {
 .h-20 {
   height: 5rem;
 }
-.h-6 {
-  height: 1.5rem;
+.h-3 {
+  height: 0.75rem;
+}
+.h-full {
+  height: 100%;
 }
 .h-10 {
   height: 2.5rem;
@@ -1066,11 +1066,8 @@ select {
 .h-4 {
   height: 1rem;
 }
-.h-3 {
-  height: 0.75rem;
-}
-.h-full {
-  height: 100%;
+.h-6 {
+  height: 1.5rem;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -1090,17 +1087,17 @@ select {
 .w-full {
   width: 100%;
 }
-.w-6 {
-  width: 1.5rem;
+.w-3 {
+  width: 0.75rem;
 }
 .w-4 {
   width: 1rem;
 }
+.w-6 {
+  width: 1.5rem;
+}
 .w-48 {
   width: 12rem;
-}
-.w-3 {
-  width: 0.75rem;
 }
 .max-w-xl {
   max-width: 36rem;
@@ -1110,6 +1107,9 @@ select {
 }
 .max-w-7xl {
   max-width: 80rem;
+}
+.max-w-lg {
+  max-width: 32rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1141,22 +1141,6 @@ select {
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-@-webkit-keyframes pulse {
-
-  50% {
-    opacity: .5;
-  }
-}
-@keyframes pulse {
-
-  50% {
-    opacity: .5;
-  }
-}
-.animate-pulse {
-  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 @-webkit-keyframes ping {
 
@@ -1297,14 +1281,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
 }
-.bg-sky-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
-}
-.bg-sky-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
-}
 .fill-current {
   fill: currentColor;
 }
@@ -1313,6 +1289,9 @@ select {
 }
 .p-2 {
   padding: 0.5rem;
+}
+.p-4 {
+  padding: 1rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1490,14 +1469,14 @@ select {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.opacity-75 {
+  opacity: 0.75;
+}
 .opacity-0 {
   opacity: 0;
 }
 .opacity-100 {
   opacity: 1;
-}
-.opacity-75 {
-  opacity: 0.75;
 }
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);

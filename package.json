@@ -21,6 +21,7 @@
         "tailwindcss": "^3.0.18"
     },
     "dependencies": {
-        "html5-qrcode": "^2.2.0"
+        "html5-qrcode": "^2.2.0",
+        "qr-scanner": "^1.4.1"
     }
 }

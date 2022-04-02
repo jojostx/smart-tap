@@ -18,6 +18,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    @stack('scripts')
 </head>
 
 <body class="antialiased font-dm">

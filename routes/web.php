@@ -21,7 +21,11 @@ Route::get('/dashboard', function () {
     return view('auth.client.dashboard');
 })->middleware(['auth:web'])->name('dashboard');
 
-Route::get('/qr-code', App\Http\Controllers\Qrcode\ShowController::class)->name('qr-code');
-Route::post('/qr-code', App\Http\Controllers\Qrcode\CreateController::class);
+Route::prefix('qr-code')->name('qr-code.')->group(function () {
+    Route::get('/create', App\Http\Controllers\Qrcode\ShowController::class)->name('create');
+    Route::post('/create', App\Http\Controllers\Qrcode\CreateController::class);
+
+    Route::get('/scan', App\Http\Controllers\Qrcode\ScannerController::class)->name('scan');
+});
 
 require __DIR__.'/auth.php';
