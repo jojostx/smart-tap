@@ -129,13 +129,13 @@ jobs:
 
             mkdir -p ${{ matrix.server.path }}/storage/framework/{cache,sessions,testing,views}
 
-            sudo touch ${{ matrix.server.path }}/releases/${GITHUB_SHA}/storage/worker.log
+            touch ${{ matrix.server.path }}/releases/${GITHUB_SHA}/storage/worker.log
 
             echo -e "\n[`date`] [${GITHUB_SHA}]\n" >> ${{ matrix.server.path }}/releases/${GITHUB_SHA}/storage/worker.log
 
-            sudo rm -rf ${{ matrix.server.path }}/releases/${GITHUB_SHA}/storage
+            rm -rf ${{ matrix.server.path }}/releases/${GITHUB_SHA}/storage
 
-            sudo chmod -R 0777 ${{ matrix.server.path }}/storage/*
+            chmod -R 0777 ${{ matrix.server.path }}/storage/*
 
   run-before-hooks:
     name: "${{ matrix.server.name }}: Before hook"
