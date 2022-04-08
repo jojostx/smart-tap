@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('auth.client.dashboard');
+    return view('app.client.dashboard');
 })->middleware(['auth:web'])->name('dashboard');
 
 Route::prefix('qr-code')->name('qr-code.')->group(function () {
